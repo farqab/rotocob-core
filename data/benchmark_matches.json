@@ -1,0 +1,1144 @@
+[
+  {
+    "metadata": {
+      "code": 3225699,
+      "name": "Derthona Basket - Burgos",
+      "league": "Basketbol Şampiyonlar Ligi",
+      "date": "2026-10-21",
+      "market_line": 173.5,
+      "odds_under": 1.61,
+      "odds_over": 1.61,
+      "actual_final_score": 168,
+      "actual_regular_score": 158,
+      "bet_recommendation": "ALT 173.5",
+      "outcome": "WON (✅)"
+    },
+    "empirical_features": {
+      "home": {
+        "name": "Derthona Basket",
+        "sample_size": 6,
+        "points_scored_weighted": 81.9,
+        "points_allowed_weighted": 88.2,
+        "std_scoring": 8.08,
+        "recent_regular_time_games": [
+          {
+            "date": "18 Eki",
+            "opp": "Maxima Roma",
+            "loc": "İç",
+            "pf": 75,
+            "pa": 89,
+            "total": 164,
+            "score": "75-89"
+          },
+          {
+            "date": "14 Eki",
+            "opp": "Aris",
+            "loc": "Dep",
+            "pf": 68,
+            "pa": 88,
+            "total": 156,
+            "score": "68-88"
+          },
+          {
+            "date": "11 Eki",
+            "opp": "R.Emilia",
+            "loc": "Dep",
+            "pf": 86,
+            "pa": 93,
+            "total": 179,
+            "score": "86-93"
+          },
+          {
+            "date": "7 Eki",
+            "opp": "Le Mans",
+            "loc": "İç",
+            "pf": 89,
+            "pa": 83,
+            "total": 172,
+            "score": "89-83"
+          },
+          {
+            "date": "4 Eki",
+            "opp": "BC Roma Spqr",
+            "loc": "Dep",
+            "pf": 70,
+            "pa": 108,
+            "total": 178,
+            "score": "70-108"
+          }
+        ]
+      },
+      "away": {
+        "name": "CB San Pablo Burgos",
+        "sample_size": 6,
+        "points_scored_weighted": 83.9,
+        "points_allowed_weighted": 86.7,
+        "std_scoring": 6.7,
+        "recent_regular_time_games": [
+          {
+            "date": "17 Eki",
+            "opp": "Obradoiro",
+            "loc": "İç",
+            "pf": 72,
+            "pa": 79,
+            "total": 151,
+            "score": "72-79"
+          },
+          {
+            "date": "14 Eki",
+            "opp": "H. Jerusalem",
+            "loc": "İç",
+            "pf": 84,
+            "pa": 85,
+            "total": 169,
+            "score": "84-85"
+          },
+          {
+            "date": "11 Eki",
+            "opp": "Bilbao",
+            "loc": "Dep",
+            "pf": 87,
+            "pa": 96,
+            "total": 183,
+            "score": "87-96"
+          },
+          {
+            "date": "7 Eki",
+            "opp": "Aris",
+            "loc": "Dep",
+            "pf": 80,
+            "pa": 93,
+            "total": 173,
+            "score": "80-93"
+          },
+          {
+            "date": "4 Eki",
+            "opp": "Lleida",
+            "loc": "Dep",
+            "pf": 94,
+            "pa": 81,
+            "total": 175,
+            "score": "94-81"
+          }
+        ]
+      }
+    },
+    "simulation_output": {
+      "projected_home_score": 86.2,
+      "projected_away_score": 85.4,
+      "projected_total": 171.6,
+      "raw_empirical_total": 170.4,
+      "pace": 78.1,
+      "is_high_tempo": false,
+      "home_win_prob": 0.526,
+      "away_win_prob": 0.474,
+      "prob_under": 0.556,
+      "prob_over": 0.444,
+      "edge_under_pct": 5.6,
+      "edge_over_pct": -5.6,
+      "ev_roi_under_pct": -10.5,
+      "ev_roi_over_pct": -28.5,
+      "recommendation": "ALT 173.5",
+      "coupon_grade": "VALUE"
+    }
+  },
+  {
+    "metadata": {
+      "code": 3225685,
+      "name": "Frankfurt - Tenerife",
+      "league": "Basketbol Şampiyonlar Ligi",
+      "date": "2026-10-21",
+      "market_line": 165.5,
+      "odds_under": 1.61,
+      "odds_over": 1.61,
+      "actual_final_score": 176,
+      "actual_regular_score": 176,
+      "bet_recommendation": "PAS (Model edge < %4.5)",
+      "outcome": "LOST (❌)"
+    },
+    "empirical_features": {
+      "home": {
+        "name": "Fraport Skyliners",
+        "sample_size": 6,
+        "points_scored_weighted": 82.2,
+        "points_allowed_weighted": 79.3,
+        "std_scoring": 7.02,
+        "recent_regular_time_games": [
+          {
+            "date": "18 Eki",
+            "opp": "Trier",
+            "loc": "İç",
+            "pf": 78,
+            "pa": 65,
+            "total": 143,
+            "score": "78-65"
+          },
+          {
+            "date": "15 Eki",
+            "opp": "London Lions",
+            "loc": "Dep",
+            "pf": 81,
+            "pa": 76,
+            "total": 157,
+            "score": "81-76"
+          },
+          {
+            "date": "11 Eki",
+            "opp": "Hamburg",
+            "loc": "İç",
+            "pf": 89,
+            "pa": 78,
+            "total": 167,
+            "score": "89-78"
+          },
+          {
+            "date": "6 Eki",
+            "opp": "Siauliai",
+            "loc": "İç",
+            "pf": 79,
+            "pa": 71,
+            "total": 150,
+            "score": "79-71"
+          },
+          {
+            "date": "4 Eki",
+            "opp": "Phoenx Hagen",
+            "loc": "Dep",
+            "pf": 93,
+            "pa": 88,
+            "total": 181,
+            "score": "93-88"
+          }
+        ]
+      },
+      "away": {
+        "name": "CB 1939 Canarias",
+        "sample_size": 6,
+        "points_scored_weighted": 85.5,
+        "points_allowed_weighted": 79.9,
+        "std_scoring": 6.47,
+        "recent_regular_time_games": [
+          {
+            "date": "18 Eki",
+            "opp": "Baskonia",
+            "loc": "İç",
+            "pf": 82,
+            "pa": 77,
+            "total": 159,
+            "score": "82-77"
+          },
+          {
+            "date": "14 Eki",
+            "opp": "Maxima Roma",
+            "loc": "İç",
+            "pf": 96,
+            "pa": 71,
+            "total": 167,
+            "score": "96-71"
+          },
+          {
+            "date": "11 Eki",
+            "opp": "Murcia",
+            "loc": "Dep",
+            "pf": 90,
+            "pa": 77,
+            "total": 167,
+            "score": "90-77"
+          },
+          {
+            "date": "6 Eki",
+            "opp": "London Lions",
+            "loc": "Dep",
+            "pf": 77,
+            "pa": 89,
+            "total": 166,
+            "score": "77-89"
+          },
+          {
+            "date": "3 Eki",
+            "opp": "Malaga",
+            "loc": "Dep",
+            "pf": 80,
+            "pa": 75,
+            "total": 155,
+            "score": "80-75"
+          }
+        ]
+      }
+    },
+    "simulation_output": {
+      "projected_home_score": 82.7,
+      "projected_away_score": 81.5,
+      "projected_total": 164.2,
+      "raw_empirical_total": 163.5,
+      "pace": 75.0,
+      "is_high_tempo": false,
+      "home_win_prob": 0.532,
+      "away_win_prob": 0.468,
+      "prob_under": 0.536,
+      "prob_over": 0.464,
+      "edge_under_pct": 3.6,
+      "edge_over_pct": -3.6,
+      "ev_roi_under_pct": -13.7,
+      "ev_roi_over_pct": -25.3,
+      "recommendation": "PAS",
+      "coupon_grade": "PASS"
+    }
+  },
+  {
+    "metadata": {
+      "code": 3225758,
+      "name": "Hapoel Jerusalem - Rigas Zelli",
+      "league": "Basketbol Şampiyonlar Ligi",
+      "date": "2026-10-21",
+      "market_line": 171.5,
+      "odds_under": 1.61,
+      "odds_over": 1.61,
+      "actual_final_score": 164,
+      "actual_regular_score": 164,
+      "bet_recommendation": "ALT 171.5",
+      "outcome": "WON (✅) — Hata: 1.9 sayı"
+    },
+    "empirical_features": {
+      "home": {
+        "name": "Hapoel Jerusalem",
+        "sample_size": 6,
+        "points_scored_weighted": 86.7,
+        "points_allowed_weighted": 73.9,
+        "std_scoring": 8.47,
+        "recent_regular_time_games": [
+          {
+            "date": "17 Eki",
+            "opp": "Hap. Beer Sh",
+            "loc": "İç",
+            "pf": 88,
+            "pa": 74,
+            "total": 162,
+            "score": "88-74"
+          },
+          {
+            "date": "14 Eki",
+            "opp": "Burgos",
+            "loc": "Dep",
+            "pf": 85,
+            "pa": 84,
+            "total": 169,
+            "score": "85-84"
+          },
+          {
+            "date": "11 Eki",
+            "opp": "Hapoel Holon",
+            "loc": "Dep",
+            "pf": 92,
+            "pa": 69,
+            "total": 161,
+            "score": "92-69"
+          },
+          {
+            "date": "6 Eki",
+            "opp": "KK Cedevita",
+            "loc": "Dep",
+            "pf": 75,
+            "pa": 64,
+            "total": 139,
+            "score": "75-64"
+          },
+          {
+            "date": "4 Eki",
+            "opp": "Maccabi T.A.",
+            "loc": "Dep",
+            "pf": 71,
+            "pa": 88,
+            "total": 159,
+            "score": "71-88"
+          }
+        ]
+      },
+      "away": {
+        "name": "Rigas Zelli",
+        "sample_size": 6,
+        "points_scored_weighted": 88.3,
+        "points_allowed_weighted": 80.6,
+        "std_scoring": 8.73,
+        "recent_regular_time_games": [
+          {
+            "date": "17 Eki",
+            "opp": "Liepaja",
+            "loc": "İç",
+            "pf": 85,
+            "pa": 69,
+            "total": 154,
+            "score": "85-69"
+          },
+          {
+            "date": "14 Eki",
+            "opp": "KK Cedevita",
+            "loc": "İç",
+            "pf": 89,
+            "pa": 79,
+            "total": 168,
+            "score": "89-79"
+          },
+          {
+            "date": "9 Eki",
+            "opp": "Tartu",
+            "loc": "Dep",
+            "pf": 94,
+            "pa": 74,
+            "total": 168,
+            "score": "94-74"
+          },
+          {
+            "date": "6 Eki",
+            "opp": "Rostock Seaw",
+            "loc": "Dep",
+            "pf": 86,
+            "pa": 87,
+            "total": 173,
+            "score": "86-87"
+          },
+          {
+            "date": "3 Eki",
+            "opp": "BK Ogre",
+            "loc": "İç",
+            "pf": 110,
+            "pa": 85,
+            "total": 195,
+            "score": "110-85"
+          }
+        ]
+      }
+    },
+    "simulation_output": {
+      "projected_home_score": 86.1,
+      "projected_away_score": 81.1,
+      "projected_total": 167.3,
+      "raw_empirical_total": 164.8,
+      "pace": 75.6,
+      "is_high_tempo": false,
+      "home_win_prob": 0.659,
+      "away_win_prob": 0.341,
+      "prob_under": 0.622,
+      "prob_over": 0.378,
+      "edge_under_pct": 12.2,
+      "edge_over_pct": -12.2,
+      "ev_roi_under_pct": 0.1,
+      "ev_roi_over_pct": -39.1,
+      "recommendation": "ALT 171.5",
+      "coupon_grade": "DIAMOND"
+    }
+  },
+  {
+    "metadata": {
+      "code": 3230176,
+      "name": "New Orleans Pelicans - Indiana Pacers",
+      "league": "NBA",
+      "date": "2026-10-21",
+      "market_line": 238.5,
+      "odds_under": 1.61,
+      "odds_over": 1.61,
+      "actual_final_score": 243,
+      "actual_regular_score": 243,
+      "bet_recommendation": "ALT 238.5 (Pre-season sample trap)",
+      "outcome": "LOST (❌)"
+    },
+    "empirical_features": {
+      "home": {
+        "name": "New Orleans Pelicans",
+        "sample_size": 5,
+        "points_scored_weighted": 114.3,
+        "points_allowed_weighted": 115.6,
+        "std_scoring": 7.23,
+        "recent_regular_time_games": [
+          {
+            "date": "22 Eki",
+            "opp": "Indiana",
+            "loc": "İç",
+            "pf": 120,
+            "pa": 123,
+            "total": 243,
+            "score": "120-123"
+          },
+          {
+            "date": "17 Eki",
+            "opp": "Washington",
+            "loc": "İç",
+            "pf": 107,
+            "pa": 106,
+            "total": 213,
+            "score": "107-106"
+          },
+          {
+            "date": "15 Eki",
+            "opp": "Dallas",
+            "loc": "Dep",
+            "pf": 101,
+            "pa": 97,
+            "total": 198,
+            "score": "101-97"
+          },
+          {
+            "date": "9 Eki",
+            "opp": "Miami",
+            "loc": "Dep",
+            "pf": 118,
+            "pa": 128,
+            "total": 246,
+            "score": "118-128"
+          },
+          {
+            "date": "7 Eki",
+            "opp": "Oklahoma",
+            "loc": "Dep",
+            "pf": 116,
+            "pa": 110,
+            "total": 226,
+            "score": "116-110"
+          }
+        ]
+      },
+      "away": {
+        "name": "Indiana Pacers",
+        "sample_size": 5,
+        "points_scored_weighted": 116.3,
+        "points_allowed_weighted": 113.6,
+        "std_scoring": 8.44,
+        "recent_regular_time_games": [
+          {
+            "date": "22 Eki",
+            "opp": "New Orleans",
+            "loc": "Dep",
+            "pf": 123,
+            "pa": 120,
+            "total": 243,
+            "score": "123-120"
+          },
+          {
+            "date": "17 Eki",
+            "opp": "Milwaukee",
+            "loc": "İç",
+            "pf": 117,
+            "pa": 117,
+            "total": 234,
+            "score": "117-117"
+          },
+          {
+            "date": "14 Eki",
+            "opp": "Oklahoma",
+            "loc": "Dep",
+            "pf": 100,
+            "pa": 100,
+            "total": 200,
+            "score": "100-100"
+          },
+          {
+            "date": "11 Eki",
+            "opp": "Atlanta",
+            "loc": "İç",
+            "pf": 117,
+            "pa": 119,
+            "total": 236,
+            "score": "117-119"
+          },
+          {
+            "date": "8 Eki",
+            "opp": "Minnesota",
+            "loc": "İç",
+            "pf": 123,
+            "pa": 112,
+            "total": 235,
+            "score": "123-112"
+          }
+        ]
+      }
+    },
+    "simulation_output": {
+      "projected_home_score": 116.2,
+      "projected_away_score": 116.0,
+      "projected_total": 232.0,
+      "raw_empirical_total": 229.9,
+      "pace": 102.6,
+      "is_high_tempo": true,
+      "home_win_prob": 0.504,
+      "away_win_prob": 0.496,
+      "prob_under": 0.654,
+      "prob_over": 0.346,
+      "edge_under_pct": 15.4,
+      "edge_over_pct": -15.4,
+      "ev_roi_under_pct": 5.3,
+      "ev_roi_over_pct": -44.3,
+      "recommendation": "ALT 238.5",
+      "coupon_grade": "DIAMOND"
+    }
+  },
+  {
+    "metadata": {
+      "code": 3230781,
+      "name": "Memphis Grizzlies - Utah Jazz",
+      "league": "NBA",
+      "date": "2026-10-21",
+      "market_line": 242.5,
+      "odds_under": 1.61,
+      "odds_over": 1.61,
+      "actual_final_score": 226,
+      "actual_regular_score": 226,
+      "bet_recommendation": "ALT 242.5",
+      "outcome": "WON (✅)"
+    },
+    "empirical_features": {
+      "home": {
+        "name": "Memphis Grizzlies",
+        "sample_size": 5,
+        "points_scored_weighted": 117.8,
+        "points_allowed_weighted": 111.0,
+        "std_scoring": 9.16,
+        "recent_regular_time_games": [
+          {
+            "date": "22 Eki",
+            "opp": "Utah",
+            "loc": "İç",
+            "pf": 123,
+            "pa": 103,
+            "total": 226,
+            "score": "123-103"
+          },
+          {
+            "date": "17 Eki",
+            "opp": "Charlotte",
+            "loc": "İç",
+            "pf": 116,
+            "pa": 98,
+            "total": 214,
+            "score": "116-98"
+          },
+          {
+            "date": "10 Eki",
+            "opp": "Chicago",
+            "loc": "Dep",
+            "pf": 104,
+            "pa": 100,
+            "total": 204,
+            "score": "104-100"
+          },
+          {
+            "date": "8 Eki",
+            "opp": "Orlando",
+            "loc": "İç",
+            "pf": 118,
+            "pa": 122,
+            "total": 240,
+            "score": "118-122"
+          },
+          {
+            "date": "6 Eki",
+            "opp": "Atlanta",
+            "loc": "Dep",
+            "pf": 132,
+            "pa": 123,
+            "total": 255,
+            "score": "132-123"
+          }
+        ]
+      },
+      "away": {
+        "name": "Utah Jazz",
+        "sample_size": 5,
+        "points_scored_weighted": 111.9,
+        "points_allowed_weighted": 117.8,
+        "std_scoring": 6.65,
+        "recent_regular_time_games": [
+          {
+            "date": "22 Eki",
+            "opp": "Memphis",
+            "loc": "Dep",
+            "pf": 103,
+            "pa": 123,
+            "total": 226,
+            "score": "103-123"
+          },
+          {
+            "date": "17 Eki",
+            "opp": "Phoenix",
+            "loc": "Dep",
+            "pf": 119,
+            "pa": 116,
+            "total": 235,
+            "score": "119-116"
+          },
+          {
+            "date": "13 Eki",
+            "opp": "San Antonio",
+            "loc": "İç",
+            "pf": 119,
+            "pa": 109,
+            "total": 228,
+            "score": "119-109"
+          },
+          {
+            "date": "7 Eki",
+            "opp": "Denver",
+            "loc": "İç",
+            "pf": 106,
+            "pa": 117,
+            "total": 223,
+            "score": "106-117"
+          },
+          {
+            "date": "5 Eki",
+            "opp": "Denver",
+            "loc": "Dep",
+            "pf": 109,
+            "pa": 97,
+            "total": 206,
+            "score": "109-97"
+          }
+        ]
+      }
+    },
+    "simulation_output": {
+      "projected_home_score": 121.1,
+      "projected_away_score": 112.1,
+      "projected_total": 233.2,
+      "raw_empirical_total": 229.2,
+      "pace": 102.3,
+      "is_high_tempo": true,
+      "home_win_prob": 0.739,
+      "away_win_prob": 0.261,
+      "prob_under": 0.728,
+      "prob_over": 0.272,
+      "edge_under_pct": 22.8,
+      "edge_over_pct": -22.8,
+      "ev_roi_under_pct": 17.2,
+      "ev_roi_over_pct": -56.2,
+      "recommendation": "ALT 242.5",
+      "coupon_grade": "DIAMOND"
+    }
+  },
+  {
+    "metadata": {
+      "code": 3230014,
+      "name": "Mobis Phoebus - LG Sakers",
+      "league": "Güney Kore KBL",
+      "date": "2026-10-22",
+      "market_line": 169.5,
+      "odds_under": 1.62,
+      "odds_over": 1.61,
+      "ms1_odds": 1.68,
+      "ms2_odds": 1.58,
+      "bet_recommendation": "MS 1 (Mobis) @ 1.68",
+      "outcome": "PENDING (Bugün 13:00)"
+    },
+    "empirical_features": {
+      "home": {
+        "name": "Mobis Phoebus",
+        "sample_size": 6,
+        "points_scored_weighted": 86.7,
+        "points_allowed_weighted": 86.5,
+        "std_scoring": 8.14,
+        "recent_regular_time_games": [
+          {
+            "date": "18 Eki",
+            "opp": "KT Sonicboom",
+            "loc": "Dep",
+            "pf": 96,
+            "pa": 80,
+            "total": 176,
+            "score": "96-80"
+          },
+          {
+            "date": "16 Eki",
+            "opp": "Goyang",
+            "loc": "Dep",
+            "pf": 82,
+            "pa": 95,
+            "total": 177,
+            "score": "82-95"
+          },
+          {
+            "date": "12 Eki",
+            "opp": "Dongbu Promy",
+            "loc": "İç",
+            "pf": 99,
+            "pa": 89,
+            "total": 188,
+            "score": "99-89"
+          },
+          {
+            "date": "10 Eki",
+            "opp": "Daegu PEG.",
+            "loc": "İç",
+            "pf": 75,
+            "pa": 81,
+            "total": 156,
+            "score": "75-81"
+          },
+          {
+            "date": "5 Eki",
+            "opp": "KCC Egis",
+            "loc": "İç",
+            "pf": 87,
+            "pa": 97,
+            "total": 184,
+            "score": "87-97"
+          }
+        ]
+      },
+      "away": {
+        "name": "LG Sakers",
+        "sample_size": 6,
+        "points_scored_weighted": 81.7,
+        "points_allowed_weighted": 87.7,
+        "std_scoring": 13.46,
+        "recent_regular_time_games": [
+          {
+            "date": "17 Eki",
+            "opp": "Daegu PEG.",
+            "loc": "Dep",
+            "pf": 75,
+            "pa": 85,
+            "total": 160,
+            "score": "75-85"
+          },
+          {
+            "date": "15 Eki",
+            "opp": "S. Thunders",
+            "loc": "Dep",
+            "pf": 86,
+            "pa": 93,
+            "total": 179,
+            "score": "86-93"
+          },
+          {
+            "date": "11 Eki",
+            "opp": " Anyang KGC",
+            "loc": "Dep",
+            "pf": 65,
+            "pa": 88,
+            "total": 153,
+            "score": "65-88"
+          },
+          {
+            "date": "8 Eki",
+            "opp": "Dongbu Promy",
+            "loc": "Dep",
+            "pf": 96,
+            "pa": 92,
+            "total": 188,
+            "score": "96-92"
+          },
+          {
+            "date": "6 Eki",
+            "opp": "KT Sonicboom",
+            "loc": "Dep",
+            "pf": 72,
+            "pa": 97,
+            "total": 169,
+            "score": "72-97"
+          }
+        ]
+      }
+    },
+    "simulation_output": {
+      "projected_home_score": 88.0,
+      "projected_away_score": 82.6,
+      "projected_total": 170.5,
+      "raw_empirical_total": 171.3,
+      "pace": 78.6,
+      "is_high_tempo": false,
+      "home_win_prob": 0.652,
+      "away_win_prob": 0.348,
+      "prob_under": 0.475,
+      "prob_over": 0.525,
+      "edge_under_pct": -2.3,
+      "edge_over_pct": 2.3,
+      "ev_roi_under_pct": -23.1,
+      "ev_roi_over_pct": -15.5,
+      "recommendation": "PAS",
+      "coupon_grade": "PASS"
+    }
+  },
+  {
+    "metadata": {
+      "code": 3230750,
+      "name": "Sendai 89ers - Yokohama",
+      "league": "Japonya B. Lig",
+      "date": "2026-10-22",
+      "market_line": 165.5,
+      "odds_under": 1.58,
+      "odds_over": 1.64,
+      "handicap_line": 12.5,
+      "h2_odds": 1.64,
+      "bet_recommendation": "H2 (+12.5 Yokohama) @ 1.64",
+      "outcome": "PENDING (Bugün 13:05)"
+    },
+    "empirical_features": {
+      "home": {
+        "name": "S.89Ers",
+        "sample_size": 6,
+        "points_scored_weighted": 84.6,
+        "points_allowed_weighted": 78.3,
+        "std_scoring": 10.66,
+        "recent_regular_time_games": [
+          {
+            "date": "19 Eki",
+            "opp": "N.Storks",
+            "loc": "İç",
+            "pf": 80,
+            "pa": 71,
+            "total": 151,
+            "score": "80-71"
+          },
+          {
+            "date": "17 Eki",
+            "opp": "Utsunomiya",
+            "loc": "İç",
+            "pf": 85,
+            "pa": 81,
+            "total": 166,
+            "score": "85-81"
+          },
+          {
+            "date": "11 Eki",
+            "opp": "S.Rockers S.",
+            "loc": "Dep",
+            "pf": 70,
+            "pa": 68,
+            "total": 138,
+            "score": "70-68"
+          },
+          {
+            "date": "9 Eki",
+            "opp": "Seahorses M.",
+            "loc": "İç",
+            "pf": 105,
+            "pa": 90,
+            "total": 195,
+            "score": "105-90"
+          },
+          {
+            "date": "7 Eki",
+            "opp": "Altiri Chiba",
+            "loc": "İç",
+            "pf": 81,
+            "pa": 74,
+            "total": 155,
+            "score": "81-74"
+          }
+        ]
+      },
+      "away": {
+        "name": "Yokohama B Corsairs",
+        "sample_size": 6,
+        "points_scored_weighted": 79.9,
+        "points_allowed_weighted": 83.3,
+        "std_scoring": 9.46,
+        "recent_regular_time_games": [
+          {
+            "date": "18 Eki",
+            "opp": "Levanga Hok.",
+            "loc": "İç",
+            "pf": 78,
+            "pa": 109,
+            "total": 187,
+            "score": "78-109"
+          },
+          {
+            "date": "16 Eki",
+            "opp": "R.Golden K.",
+            "loc": "İç",
+            "pf": 87,
+            "pa": 85,
+            "total": 172,
+            "score": "87-85"
+          },
+          {
+            "date": "12 Eki",
+            "opp": "Chiba Jets",
+            "loc": "İç",
+            "pf": 95,
+            "pa": 95,
+            "total": 190,
+            "score": "95-95"
+          },
+          {
+            "date": "9 Eki",
+            "opp": "Kyoto Hann.",
+            "loc": "Dep",
+            "pf": 73,
+            "pa": 74,
+            "total": 147,
+            "score": "73-74"
+          },
+          {
+            "date": "7 Eki",
+            "opp": "Osaka Evessa",
+            "loc": "Dep",
+            "pf": 66,
+            "pa": 57,
+            "total": 123,
+            "score": "66-57"
+          }
+        ]
+      }
+    },
+    "simulation_output": {
+      "projected_home_score": 85.6,
+      "projected_away_score": 78.3,
+      "projected_total": 164.0,
+      "raw_empirical_total": 163.0,
+      "pace": 74.8,
+      "is_high_tempo": false,
+      "home_win_prob": 0.678,
+      "away_win_prob": 0.322,
+      "prob_under": 0.538,
+      "prob_over": 0.462,
+      "edge_under_pct": 2.9,
+      "edge_over_pct": -2.9,
+      "ev_roi_under_pct": -15.0,
+      "ev_roi_over_pct": -24.2,
+      "recommendation": "PAS",
+      "coupon_grade": "PASS"
+    }
+  },
+  {
+    "metadata": {
+      "code": 3245928,
+      "name": "Guandong S.T. - Zhejiang L.",
+      "league": "Çin CBA",
+      "date": "2026-10-22",
+      "market_line": 180.5,
+      "odds_under": 1.58,
+      "odds_over": 1.64,
+      "bet_recommendation": "ALT 180.5 @ 1.58",
+      "outcome": "PENDING (Bugün 14:35)"
+    },
+    "empirical_features": {
+      "home": {
+        "name": "Guangdong Southern Tigers",
+        "sample_size": 6,
+        "points_scored_weighted": 83.1,
+        "points_allowed_weighted": 82.9,
+        "std_scoring": 9.84,
+        "recent_regular_time_games": [
+          {
+            "date": "20 Eki",
+            "opp": "Beijing D.",
+            "loc": "Dep",
+            "pf": 78,
+            "pa": 96,
+            "total": 174,
+            "score": "78-96"
+          },
+          {
+            "date": "18 Eki",
+            "opp": "Nanjing M.K.",
+            "loc": "Dep",
+            "pf": 95,
+            "pa": 96,
+            "total": 191,
+            "score": "95-96"
+          },
+          {
+            "date": "11 Eki",
+            "opp": "Tianjin P.",
+            "loc": "İç",
+            "pf": 93,
+            "pa": 61,
+            "total": 154,
+            "score": "93-61"
+          },
+          {
+            "date": "10 Eki",
+            "opp": "Guangzhou L.",
+            "loc": "Dep",
+            "pf": 82,
+            "pa": 86,
+            "total": 168,
+            "score": "82-86"
+          },
+          {
+            "date": "9 Eki",
+            "opp": "Shandong H.",
+            "loc": "İç",
+            "pf": 68,
+            "pa": 74,
+            "total": 142,
+            "score": "68-74"
+          }
+        ]
+      },
+      "away": {
+        "name": "Zhejiang Zhe Zheng Lions",
+        "sample_size": 6,
+        "points_scored_weighted": 88.7,
+        "points_allowed_weighted": 92.3,
+        "std_scoring": 9.29,
+        "recent_regular_time_games": [
+          {
+            "date": "20 Eki",
+            "opp": "Fujian Stur.",
+            "loc": "Dep",
+            "pf": 99,
+            "pa": 94,
+            "total": 193,
+            "score": "99-94"
+          },
+          {
+            "date": "17 Eki",
+            "opp": "Shanxi L.",
+            "loc": "İç",
+            "pf": 85,
+            "pa": 85,
+            "total": 170,
+            "score": "85-85"
+          },
+          {
+            "date": "11 Eki",
+            "opp": "Xinjiang F.T",
+            "loc": "Dep",
+            "pf": 80,
+            "pa": 95,
+            "total": 175,
+            "score": "80-95"
+          },
+          {
+            "date": "10 Eki",
+            "opp": "Jilin N.T.",
+            "loc": "İç",
+            "pf": 101,
+            "pa": 86,
+            "total": 187,
+            "score": "101-86"
+          },
+          {
+            "date": "9 Eki",
+            "opp": "Qingdao E.",
+            "loc": "İç",
+            "pf": 77,
+            "pa": 81,
+            "total": 158,
+            "score": "77-81"
+          }
+        ]
+      }
+    },
+    "simulation_output": {
+      "projected_home_score": 90.1,
+      "projected_away_score": 85.5,
+      "projected_total": 175.8,
+      "raw_empirical_total": 173.5,
+      "pace": 79.6,
+      "is_high_tempo": true,
+      "home_win_prob": 0.628,
+      "away_win_prob": 0.372,
+      "prob_under": 0.626,
+      "prob_over": 0.374,
+      "edge_under_pct": 11.7,
+      "edge_over_pct": -11.7,
+      "ev_roi_under_pct": -1.1,
+      "ev_roi_over_pct": -38.7,
+      "recommendation": "ALT 180.5",
+      "coupon_grade": "DIAMOND"
+    }
+  }
+]
