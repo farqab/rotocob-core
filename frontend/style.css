@@ -1,0 +1,94 @@
+/* RotoBot Signature Ambient Blueprint & Grid Background */
+#main-viewport {
+  background-color: #07090e;
+  background-image:
+    radial-gradient(ellipse at 0% -4%, rgba(56, 138, 255, 0.16), transparent 62%),
+    linear-gradient(rgba(120, 190, 230, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(120, 190, 230, 0.04) 1px, transparent 1px);
+  background-size: 100% 100%, 52px 52px, 52px 52px;
+  background-position: 0 0, 0 0, 0 0;
+}
+
+body.mode-fantasy #main-viewport {
+  background-image:
+    radial-gradient(ellipse at 0% -4%, rgba(0, 212, 146, 0.16), transparent 62%),
+    linear-gradient(rgba(0, 212, 146, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 212, 146, 0.04) 1px, transparent 1px);
+}
+
+/* Custom Scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.12);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.22);
+}
+
+/* Active Nav Link Highlights */
+.sidebar-nav-link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 9px 12px;
+  border-radius: 10px;
+  font-size: 13px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.65);
+  text-decoration: none;
+  transition: all 0.18s ease;
+}
+
+.sidebar-nav-link:hover {
+  background: rgba(255, 255, 255, 0.04);
+  color: #ffffff;
+}
+
+.sidebar-nav-link.active {
+  background: rgba(0, 211, 242, 0.08);
+  color: #00d3f2;
+  font-weight: 600;
+  border: 1px solid rgba(0, 211, 242, 0.2);
+}
+
+body.mode-fantasy .sidebar-nav-link.active {
+  background: rgba(0, 212, 146, 0.12);
+  color: #3ee6ac;
+  border-color: rgba(0, 212, 146, 0.25);
+}
+
+/* Ev Badge Colors */
+.ev-pos {
+  background: rgba(16, 185, 129, 0.15);
+  color: #10b981;
+  border: 1px solid rgba(16, 185, 129, 0.3);
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 700;
+  padding: 2px 7px;
+  border-radius: 5px;
+}
+
+.badge-over {
+  background: #0284c7;
+  color: #ffffff;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-weight: 700;
+  font-size: 11px;
+}
+
+.badge-under {
+  background: #e11d48;
+  color: #ffffff;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-weight: 700;
+  font-size: 11px;
+}
