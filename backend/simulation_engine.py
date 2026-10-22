@@ -138,8 +138,15 @@ def simulate_basketball_match(match_data, summary_d=None, num_simulations=5000, 
     fair_prob_over = imp_over / imp_sum
     fair_prob_under = imp_under / imp_sum
 
-    ev_over = round((prob_over - fair_prob_over) * 100.0, 1)
-    ev_under = round((prob_under - fair_prob_under) * 100.0, 1)
+    # Model Edge (% points difference over de-vigged fair probability)
+    edge_over = round((prob_over - fair_prob_over) * 100.0, 1)
+    edge_under = round((prob_under - fair_prob_under) * 100.0, 1)
+
+    # True Expected Value ROI % = (Prob * Odds - 1.0) * 100%
+    ev_roi_over = round((prob_over * over_odds - 1.0) * 100.0, 1)
+    ev_roi_under = round((prob_under * under_odds - 1.0) * 100.0, 1)
+    ev_over = edge_over
+    ev_under = edge_under
 
     # Also check alternate lines with higher payout odds (1.65 - 1.92) if they yield superior edge
     for alt in alt_totals:
@@ -206,8 +213,18 @@ def simulate_basketball_match(match_data, summary_d=None, num_simulations=5000, 
 
     elapsed = round(time.time() - start_time, 3)
 
+    best_edge = rec_ev
+    best_roi = ev_roi_over if rec_side == "OVER" else (ev_roi_under if rec_side == "UNDER" else 0.0)
+
     return {
         "verified": True,
+        "data_verified": True,
+        "edge_over_pct": edge_over,
+        "edge_under_pct": edge_under,
+        "ev_roi_over_pct": ev_roi_over,
+        "ev_roi_under_pct": ev_roi_under,
+        "best_edge": best_edge,
+        "best_ev_roi": best_roi,
         "status": "QUARANTINED" if is_quarantined else ("PACE_GUARD" if pace_guard_active else "VERIFIED"),
         "num_simulations": num_simulations,
         "elapsed_seconds": elapsed,
