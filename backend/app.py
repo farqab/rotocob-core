@@ -3,6 +3,7 @@ import json
 import uuid
 import asyncio
 import time
+import threading
 from fastapi import FastAPI, Request
 from fastapi.responses import StreamingResponse, JSONResponse
 from fastapi.staticfiles import StaticFiles
@@ -17,7 +18,7 @@ app = FastAPI(title="RotoBot Core — Nesine Canlı Basketbol & Monte Carlo Moto
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],
-    allow_credentials=True,
+    allow_credentials=False,
     allow_methods=["*"],
     allow_headers=["*"],
 )
@@ -32,9 +33,19 @@ CACHE_DATA = {
     "ev_picks": []
 }
 
+_REFRESH_LOCK = threading.Lock()
+
 def get_or_refresh_nesine_bulletin(force=False):
     now = time.time()
     # Cache for 5 minutes unless forced
+    if not force and CACHE_DATA["matches"] and (now - CACHE_DATA["last_fetched"] < 300):
+        return CACHE_DATA["matches"], CACHE_DATA["ev_picks"]
+    # Only one refresh at a time; later callers reuse the cache the first one fills
+    with _REFRESH_LOCK:
+        return _refresh_bulletin_locked(force)
+
+def _refresh_bulletin_locked(force=False):
+    now = time.time()
     if not force and CACHE_DATA["matches"] and (now - CACHE_DATA["last_fetched"] < 300):
         return CACHE_DATA["matches"], CACHE_DATA["ev_picks"]
 
@@ -48,7 +59,7 @@ def get_or_refresh_nesine_bulletin(force=False):
 
     for m in matches:
         code_int = int(m.get("code", 0))
-        sim = simulate_basketball_match(m, summary_d=summaries.get(code_int), num_simulations=5000)
+        sim = simulate_basketball_match(m, summary_d=summaries.get(code_int), num_simulations=5000, fetch_missing=False)
         simulations[m["id"]] = sim
         m["simulation"] = sim
 
@@ -95,7 +106,7 @@ def get_or_refresh_nesine_bulletin(force=False):
 # -----------------
 
 @app.get("/api/nesine/bulletin")
-async def get_nesine_bulletin(refresh: bool = False):
+def get_nesine_bulletin(refresh: bool = False):
     matches, ev_picks = get_or_refresh_nesine_bulletin(force=refresh)
     return {
         "status": "success",
@@ -106,18 +117,18 @@ async def get_nesine_bulletin(refresh: bool = False):
     }
 
 @app.get("/api/props")
-async def get_props_compat():
+def get_props_compat():
     """Compatibility endpoint for the Prop Explorer table, populated with real Nesine +EV picks."""
     _, ev_picks = get_or_refresh_nesine_bulletin()
     return ev_picks
 
 @app.get("/api/games")
-async def get_games_compat():
+def get_games_compat():
     matches, _ = get_or_refresh_nesine_bulletin()
     return matches
 
 @app.post("/api/simulate/{match_id}")
-async def simulate_on_demand(match_id: str):
+def simulate_on_demand(match_id: str):
     matches, _ = get_or_refresh_nesine_bulletin()
     target = next((m for m in matches if m["id"] == match_id), None)
     if not target:
@@ -135,7 +146,7 @@ async def send_chat_message(req: Request):
     content = body.get("content", "")
     thread_id = body.get("thread_id", str(uuid.uuid4()))
 
-    matches, ev_picks = get_or_refresh_nesine_bulletin()
+    matches, ev_picks = await asyncio.to_thread(get_or_refresh_nesine_bulletin)
 
     async def sse_event_stream():
         yield f"event: checkpoint\ndata: {json.dumps({'checkpoint_id': f'chk_{uuid.uuid4().hex[:8]}'})}\n\n"
@@ -147,9 +158,19 @@ async def send_chat_message(req: Request):
         lower_q = content.lower()
 
         # Check for specific team
-        found_matches = [m for m in matches if any(w in m["home_team"].lower() or w in m["away_team"].lower() for w in lower_q.split())]
+        # Ignore short words ("a", "ve", "vs") that would match almost every team name
+        query_words = [w for w in lower_q.split() if len(w) >= 3]
+        found_matches = [m for m in matches if any(w in m["home_team"].lower() or w in m["away_team"].lower() for w in query_words)]
 
-        if found_matches:
+        if found_matches and not found_matches[0]["simulation"].get("verified"):
+            t = found_matches[0]
+            msg = (
+                f"📊 **{t['home_team']} vs {t['away_team']} ({t['league']} | Kod: {t['code']})**\n\n"
+                f"Bu maç için yeterli resmi geçmiş veri yok; tahmin üretilmedi.\n"
+            )
+            yield f"event: message\ndata: {json.dumps({'chunk': msg})}\n\n"
+
+        elif found_matches:
             target = found_matches[0]
             sim = target["simulation"]
             meta = sim.get("empirical_meta") or {}

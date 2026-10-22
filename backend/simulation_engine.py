@@ -2,7 +2,7 @@ import numpy as np
 import time
 from .team_ratings import parse_empirical_match_data, fetch_summaries_batch
 
-def simulate_basketball_match(match_data, summary_d=None, num_simulations=5000):
+def simulate_basketball_match(match_data, summary_d=None, num_simulations=5000, fetch_missing=True):
     """
     RotoBot-Grade 100% Empirical Monte Carlo Engine (Zero Fallback):
     1. Extracts real historical regular-time (4Q, OT-stripped) match scores from Nesine ApiStats v3.
@@ -16,7 +16,7 @@ def simulate_basketball_match(match_data, summary_d=None, num_simulations=5000):
     over_odds = float(match_data.get("odds_total_over", 1.85))
     under_odds = float(match_data.get("odds_total_under", 1.85))
 
-    if summary_d is None and code:
+    if summary_d is None and code and fetch_missing:
         batch = fetch_summaries_batch([code])
         summary_d = batch.get(int(code))
 

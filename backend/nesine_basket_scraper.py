@@ -1,14 +1,15 @@
 import urllib.request
 import json
+import os
 import ssl
 import re
 
 NESINE_BULLETIN_URL = "https://cdnbulten.nesine.com/api/bulten/getprebultenfull"
-NESINE_AUTH = "Basic RDQ3MDc4RDMtNjcwQi00OUJBLTgxNUYtM0IyMjI2MTM1MTZCOkI4MzJCQjZGLTQwMjgtNDIwNS05NjFELTg1N0QxRTZEOTk0OA=="
+# Can be overridden via env var; the default keeps the previous behaviour.
+NESINE_AUTH = os.environ.get("NESINE_AUTH", "Basic RDQ3MDc4RDMtNjcwQi00OUJBLTgxNUYtM0IyMjI2MTM1MTZCOkI4MzJCQjZGLTQwMjgtNDIwNS05NjFELTg1N0QxRTZEOTk0OA==")
 
+# TLS certificate verification is on (default context)
 ctx = ssl.create_default_context()
-ctx.check_hostname = False
-ctx.verify_mode = ssl.CERT_NONE
 
 HEADERS = {
     'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36',
