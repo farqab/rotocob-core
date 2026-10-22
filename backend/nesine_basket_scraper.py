@@ -78,6 +78,7 @@ def fetch_live_nesine_basketball():
 
         # Parse markets from MA — select the TRUE balanced main line (minimum |odds_under - odds_over|)
         best_total_line = None
+        best_total_mtid = None
         best_total_over_odds = None
         best_total_under_odds = None
         best_odds_diff = 999.0
@@ -85,6 +86,7 @@ def fetch_live_nesine_basketball():
         
         match_winner_home_odds = None
         match_winner_away_odds = None
+        match_winner_mtid = None
 
         for mk in m.get("MA", []):
             mtid = mk.get("MTID")
@@ -95,6 +97,7 @@ def fetch_live_nesine_basketball():
             if mtid in (142, 1) and len(oca) >= 2:
                 match_winner_home_odds = oca[0].get("O")
                 match_winner_away_odds = oca[1].get("O")
+                match_winner_mtid = mtid
 
             # Main Total Points Over/Under (Maç Toplam Sayı Alt/Üst) - MTID 149 or MTID 226
             if mtid in (149, 226) and len(oca) >= 2 and sov and sov > 80:
@@ -118,6 +121,7 @@ def fetch_live_nesine_basketball():
                     if (diff + penalty) < best_odds_diff:
                         best_odds_diff = diff + penalty
                         best_total_line = float(sov)
+                        best_total_mtid = mtid
                         best_total_under_odds = float(o_under)
                         best_total_over_odds = float(o_over)
 
@@ -138,11 +142,13 @@ def fetch_live_nesine_basketball():
             "mbs_warning": f"⚠️ MBS {mbs} — En az {mbs} maçlık kombine zorunlu" if mbs > 1 else "✅ MBS 1 — Tek Maç Oynanabilir",
             "pace": base_pace,
             "line_total": best_total_line,
+            "total_mtid": best_total_mtid,
             "odds_total_over": best_total_over_odds,
             "odds_total_under": best_total_under_odds,
             "alt_totals": alt_totals,
             "odds_ms_home": match_winner_home_odds,
             "odds_ms_away": match_winner_away_odds,
+            "ms_mtid": match_winner_mtid,
             "markets_count": len(m.get("MA", []))
         }
         parsed_matches.append(match_data)

@@ -8,3 +8,8 @@ env/
 venv/
 scratch/
 .pytest_cache/
+
+# Odds archive (WAL files included)
+odds_history.db
+odds_history.db-wal
+odds_history.db-shm
