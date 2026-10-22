@@ -94,7 +94,7 @@ def _refresh_bulletin_locked(force=False):
             })
 
     # Sort EV picks: First DIAMOND picks, then by highest EV
-    ev_picks.sort(key=lambda x: (x["is_diamond"], x["ev_pct"]), reverse=True)
+    ev_picks.sort(key=lambda x: (x["is_diamond"], x.get("roi_pct", 0.0), x["ev_pct"]), reverse=True)
 
     CACHE_DATA["last_fetched"] = now
     CACHE_DATA["matches"] = matches
@@ -209,7 +209,7 @@ async def send_chat_message(req: Request):
                     f"{i}. **{p['matchup']}** ({p['league']})\n"
                     f"   • **Öneri:** `{p['recommendation']} ` | **Nesine Oran:** {p['odds']} | **Model Proj:** {p['model_proj']} Sayı (Saf Ort: {p.get('raw_emp_total')} Sayı)\n"
                     f"   • **Gerçek Maç Geçmişi:** {p.get('recent_summary', '')}\n"
-                    f"   • **Avantaj:** **+%{p.get('edge_pct', p['ev_pct'])} Edge** | **ROI:** +%{p.get('roi_pct', 0.0)}% ({p['mbs_warning']})\n\n"
+                    f"   • **Avantaj:** **+%{p.get('edge_pct', p['ev_pct'])} Edge** | **ROI:** +%{p.get('roi_pct', 0.0)} ({p['mbs_warning']})\n\n"
                 )
             msg += "Dilediğiniz maçı (Örn: *'Napoli Tofaş maçını simüle et'* veya *'NBA maçlarını göster'*) sorabilirsiniz."
             yield f"event: message\ndata: {json.dumps({'chunk': msg})}\n\n"
