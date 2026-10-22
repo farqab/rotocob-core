@@ -2,13 +2,17 @@ import numpy as np
 import time
 from .team_ratings import parse_empirical_match_data, fetch_summaries_batch
 
-def simulate_basketball_match(match_data, summary_d=None, num_simulations=5000, fetch_missing=True):
+def simulate_basketball_match(match_data, summary_d=None, num_simulations=5000, fetch_missing=True, empirical=None):
     """
     RotoBot-Grade 100% Empirical Monte Carlo Engine (Zero Fallback):
     1. Extracts real historical regular-time (4Q, OT-stripped) match scores from Nesine ApiStats v3.
     2. Applies Venue-Split (Home/Away), Same-League, and Standings weighting.
     3. Runs 5,000 deterministic Monte Carlo simulations using empirical team variance.
     4. Applies Empirical Bayes shrinkage & Outlier Quarantine (>22 pt divergence guard).
+
+    empirical: optional pre-parsed input ({"home": {...}, "away": {...}}) in the same shape as
+    parse_empirical_match_data() returns. When given, the raw ApiStats summary is not needed
+    and no network call is made (used by offline tests and benchmarks).
     """
     start_time = time.time()
     code = match_data.get("code", 0)
@@ -16,11 +20,11 @@ def simulate_basketball_match(match_data, summary_d=None, num_simulations=5000, 
     over_odds = float(match_data.get("odds_total_over", 1.85))
     under_odds = float(match_data.get("odds_total_under", 1.85))
 
-    if summary_d is None and code and fetch_missing:
+    if empirical is None and summary_d is None and code and fetch_missing:
         batch = fetch_summaries_batch([code])
         summary_d = batch.get(int(code))
 
-    emp = parse_empirical_match_data(code, summary_d)
+    emp = empirical if empirical is not None else parse_empirical_match_data(code, summary_d)
     if not emp:
         return {
             "verified": False,
