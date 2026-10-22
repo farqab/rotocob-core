@@ -84,6 +84,8 @@ def _refresh_bulletin_locked(force=False):
                 "raw_emp_total": sim.get("raw_empirical_total"),
                 "model_prob": f"{int((sim['prob_over'] if sim['rec_side'] == 'OVER' else sim['prob_under']) * 100)}%",
                 "ev_pct": sim["best_ev"],
+                "edge_pct": sim.get("best_edge", sim["best_ev"]),
+                "roi_pct": sim.get("best_ev_roi", 0.0),
                 "mbs": m["mbs"],
                 "mbs_warning": m["mbs_warning"],
                 "home_avg": f"{meta.get('home_pf', '-')}/{meta.get('home_pa', '-')}",
@@ -189,7 +191,7 @@ async def send_chat_message(req: Request):
                 f"- **Saf İstatistik Toplamı:** {sim.get('raw_empirical_total', '-')} Sayı | **Dengelenmiş Model Toplamı:** {sim['projected_total']} Sayı\n\n"
             )
             if sim["best_ev"] >= 3.5:
-                msg += f"🔥 **MODEL TAVSİYESİ (+EV):** **{sim['recommendation']}** (Değer Farkı: **+%{sim['best_ev']} EV**)\n"
+                msg += f"🔥 **MODEL TAVSİYESİ (+EV):** **{sim['recommendation']}** (Avantaj: **+%{sim.get('best_edge', sim['best_ev'])} Edge** | Getiri: **+%{sim.get('best_ev_roi', 0.0)} ROI**)\n"
             else:
                 msg += f"⚖️ **MODEL TAVSİYESİ:** `{sim['recommendation']}` — Oran avantajı eşiğin altında.\n"
                 
@@ -207,7 +209,7 @@ async def send_chat_message(req: Request):
                     f"{i}. **{p['matchup']}** ({p['league']})\n"
                     f"   • **Öneri:** `{p['recommendation']} ` | **Nesine Oran:** {p['odds']} | **Model Proj:** {p['model_proj']} Sayı (Saf Ort: {p.get('raw_emp_total')} Sayı)\n"
                     f"   • **Gerçek Maç Geçmişi:** {p.get('recent_summary', '')}\n"
-                    f"   • **Avantaj:** **+%{p['ev_pct']} EV** ({p['mbs_warning']})\n\n"
+                    f"   • **Avantaj:** **+%{p.get('edge_pct', p['ev_pct'])} Edge** | **ROI:** +%{p.get('roi_pct', 0.0)}% ({p['mbs_warning']})\n\n"
                 )
             msg += "Dilediğiniz maçı (Örn: *'Napoli Tofaş maçını simüle et'* veya *'NBA maçlarını göster'*) sorabilirsiniz."
             yield f"event: message\ndata: {json.dumps({'chunk': msg})}\n\n"

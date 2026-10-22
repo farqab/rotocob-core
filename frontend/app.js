@@ -175,7 +175,7 @@ document.addEventListener('DOMContentLoaded', () => {
         </td>
         <td class="py-3 px-4 font-mono">${p.model_prob}</td>
         <td class="py-3 px-4 font-mono text-white font-bold">${p.odds}</td>
-        <td class="py-3 px-4"><span class="ev-pos">+%${p.ev_pct} EV</span></td>
+        <td class="py-3 px-4"><span class="ev-pos">+%${p.edge_pct || p.ev_pct} Edge <span class="text-xs text-slate-400 font-normal">(ROI: %${p.roi_pct || 0})</span></span></td>
         <td class="py-3 px-4"><span class="badge-over">${p.recommendation}</span></td>
         <td class="py-3 px-4 ${mbsClass}">${p.mbs_warning}</td>
       `;

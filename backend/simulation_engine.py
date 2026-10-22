@@ -182,6 +182,10 @@ def simulate_basketball_match(match_data, summary_d=None, num_simulations=5000, 
     over_odds = best_over_odds
     under_odds = best_under_odds
 
+    # Recalculate true ROI on the final selected barem line and payout odds
+    ev_roi_over = round((prob_over * over_odds - 1.0) * 100.0, 1)
+    ev_roi_under = round((prob_under * under_odds - 1.0) * 100.0, 1)
+
     recommendation = "PAS"
     rec_ev = 0.0
     rec_side = None
