@@ -208,12 +208,13 @@ def simulate_basketball_match(match_data, summary_d=None, num_simulations=5000, 
         recommendation = "BAREM SAPMASI (PAS)"
     elif pace_guard_active:
         recommendation = "YÜKSEK TEMPO RİSKİ (PAS)"
-    elif ev_over >= 4.5 and prob_over >= 0.55 and ev_over > ev_under:
+    # ROI gate: a bet is only recommended when it has positive expected return at the actual odds
+    elif ev_over >= 4.5 and prob_over >= 0.55 and ev_over > ev_under and ev_roi_over > 0.0:
         recommendation = f"ÜST {nesine_line}"
         rec_ev = ev_over
         rec_side = "OVER"
         coupon_grade = "DIAMOND" if (prob_over >= 0.58 and ev_over >= 7.5) else "VALUE"
-    elif ev_under >= 4.5 and prob_under >= 0.55 and ev_under > ev_over:
+    elif ev_under >= 4.5 and prob_under >= 0.55 and ev_under > ev_over and ev_roi_under > 0.0:
         recommendation = f"ALT {nesine_line}"
         rec_ev = ev_under
         rec_side = "UNDER"

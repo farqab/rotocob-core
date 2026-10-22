@@ -97,11 +97,6 @@ def test_probabilities_are_consistent(idx, no_network):
     assert abs(result["prob_under"] + result["prob_over"] - 1.0) < 1e-6
 
 
-@pytest.mark.xfail(
-    strict=True,
-    reason="Known issue: recommendation gating uses Edge (model vs de-vigged fair prob), "
-           "not ROI at the actual payout odds, so some recommended bets have negative ROI.",
-)
 def test_recommended_bets_have_positive_roi(no_network):
     negative = []
     for b in load_benchmarks():
