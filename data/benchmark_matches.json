@@ -297,7 +297,8 @@
       "actual_final_score": 164,
       "actual_regular_score": 164,
       "bet_recommendation": "ALT 171.5",
-      "outcome": "WON (✅) — Hata: 1.9 sayı"
+      "outcome": "WON (✅)",
+      "notes": "Hata: 1.9 sayı"
     },
     "empirical_features": {
       "home": {
